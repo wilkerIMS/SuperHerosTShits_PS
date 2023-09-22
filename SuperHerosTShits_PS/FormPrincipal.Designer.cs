@@ -30,11 +30,14 @@
         {
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.prodtoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.clienteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.cadastrarClientesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.cadastrarProdutoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.estoqueToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.funcionarioToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.cadastrarFunacionarioToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.cadastrarProdutoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.clienteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.cadastrarClientesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.vendaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.inserirVendaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -43,7 +46,8 @@
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.prodtoToolStripMenuItem,
             this.funcionarioToolStripMenuItem,
-            this.clienteToolStripMenuItem});
+            this.clienteToolStripMenuItem,
+            this.vendaToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(800, 24);
@@ -53,25 +57,25 @@
             // prodtoToolStripMenuItem
             // 
             this.prodtoToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.cadastrarProdutoToolStripMenuItem});
+            this.cadastrarProdutoToolStripMenuItem,
+            this.estoqueToolStripMenuItem});
             this.prodtoToolStripMenuItem.Name = "prodtoToolStripMenuItem";
             this.prodtoToolStripMenuItem.Size = new System.Drawing.Size(62, 20);
             this.prodtoToolStripMenuItem.Text = "Produto";
             // 
-            // clienteToolStripMenuItem
+            // cadastrarProdutoToolStripMenuItem
             // 
-            this.clienteToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.cadastrarClientesToolStripMenuItem});
-            this.clienteToolStripMenuItem.Name = "clienteToolStripMenuItem";
-            this.clienteToolStripMenuItem.Size = new System.Drawing.Size(56, 20);
-            this.clienteToolStripMenuItem.Text = "Cliente";
+            this.cadastrarProdutoToolStripMenuItem.Name = "cadastrarProdutoToolStripMenuItem";
+            this.cadastrarProdutoToolStripMenuItem.Size = new System.Drawing.Size(170, 22);
+            this.cadastrarProdutoToolStripMenuItem.Text = "Cadastrar Produto";
+            this.cadastrarProdutoToolStripMenuItem.Click += new System.EventHandler(this.cadastrarProdutoToolStripMenuItem_Click);
             // 
-            // cadastrarClientesToolStripMenuItem
+            // estoqueToolStripMenuItem
             // 
-            this.cadastrarClientesToolStripMenuItem.Name = "cadastrarClientesToolStripMenuItem";
-            this.cadastrarClientesToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.cadastrarClientesToolStripMenuItem.Text = "Cadastrar Clientes";
-            this.cadastrarClientesToolStripMenuItem.Click += new System.EventHandler(this.cadastrarClientesToolStripMenuItem_Click);
+            this.estoqueToolStripMenuItem.Name = "estoqueToolStripMenuItem";
+            this.estoqueToolStripMenuItem.Size = new System.Drawing.Size(170, 22);
+            this.estoqueToolStripMenuItem.Text = "Estoque";
+            this.estoqueToolStripMenuItem.Click += new System.EventHandler(this.estoqueToolStripMenuItem_Click);
             // 
             // funcionarioToolStripMenuItem
             // 
@@ -88,12 +92,35 @@
             this.cadastrarFunacionarioToolStripMenuItem.Text = "Cadastrar Funacionario";
             this.cadastrarFunacionarioToolStripMenuItem.Click += new System.EventHandler(this.cadastrarFunacionarioToolStripMenuItem_Click);
             // 
-            // cadastrarProdutoToolStripMenuItem
+            // clienteToolStripMenuItem
             // 
-            this.cadastrarProdutoToolStripMenuItem.Name = "cadastrarProdutoToolStripMenuItem";
-            this.cadastrarProdutoToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.cadastrarProdutoToolStripMenuItem.Text = "Cadastrar Produto";
-            this.cadastrarProdutoToolStripMenuItem.Click += new System.EventHandler(this.cadastrarProdutoToolStripMenuItem_Click);
+            this.clienteToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.cadastrarClientesToolStripMenuItem});
+            this.clienteToolStripMenuItem.Name = "clienteToolStripMenuItem";
+            this.clienteToolStripMenuItem.Size = new System.Drawing.Size(56, 20);
+            this.clienteToolStripMenuItem.Text = "Cliente";
+            // 
+            // cadastrarClientesToolStripMenuItem
+            // 
+            this.cadastrarClientesToolStripMenuItem.Name = "cadastrarClientesToolStripMenuItem";
+            this.cadastrarClientesToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.cadastrarClientesToolStripMenuItem.Text = "Cadastrar Clientes";
+            this.cadastrarClientesToolStripMenuItem.Click += new System.EventHandler(this.cadastrarClientesToolStripMenuItem_Click);
+            // 
+            // vendaToolStripMenuItem
+            // 
+            this.vendaToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.inserirVendaToolStripMenuItem});
+            this.vendaToolStripMenuItem.Name = "vendaToolStripMenuItem";
+            this.vendaToolStripMenuItem.Size = new System.Drawing.Size(51, 20);
+            this.vendaToolStripMenuItem.Text = "Venda";
+            // 
+            // inserirVendaToolStripMenuItem
+            // 
+            this.inserirVendaToolStripMenuItem.Name = "inserirVendaToolStripMenuItem";
+            this.inserirVendaToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.inserirVendaToolStripMenuItem.Text = "Inserir Venda";
+            this.inserirVendaToolStripMenuItem.Click += new System.EventHandler(this.inserirVendaToolStripMenuItem_Click);
             // 
             // FormPrincipal
             // 
@@ -120,6 +147,9 @@
         private System.Windows.Forms.ToolStripMenuItem funcionarioToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem cadastrarFunacionarioToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem cadastrarProdutoToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem estoqueToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem vendaToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem inserirVendaToolStripMenuItem;
     }
 }
 

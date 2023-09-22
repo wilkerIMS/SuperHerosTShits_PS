@@ -34,5 +34,17 @@ namespace SuperHerosTShits_PS
             FormCadastroProduto form = new FormCadastroProduto();
             form.ShowDialog();
         }
+
+        private void estoqueToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FormEstoque form = new FormEstoque();
+            form.ShowDialog();
+        }
+
+        private void inserirVendaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FormVenda form = new FormVenda();
+            form.ShowDialog();
+        }
     }
 }
